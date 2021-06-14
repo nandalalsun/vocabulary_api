@@ -1,0 +1,21 @@
+#CROS Option
+php_flag display_errors on
+Header Set Access-Control-Allow-Origin "*"
+
+php_flag display_errors off
+
+SetEnvIf Authorization .+ HTTP_AUTHORIZATION=$0
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+#WORD
+RewriteRule ^word/([0-9]+)$      controller/word.php?id=$1 [L]
+
+#Example
+RewriteRule ^example/([0-9]+)$   controller/examples.php?id=$1 [L]
+RewriteRule ^example$            controller/examples.php [L]
+
+#Mnemonics
+RewriteRule ^mnemonics/([0-9]+)$ controller/mnemonics.php?id=$1 [L]
