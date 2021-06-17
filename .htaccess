@@ -12,6 +12,8 @@ RewriteCond %{REQUEST_FILENAME} !-f
 
 #WORD
 RewriteRule ^word/([0-9]+)$      controller/word.php?id=$1 [L]
+RewriteRule ^words$              controller/word.php   [L]
+
 
 #Example
 RewriteRule ^example/([0-9]+)$   controller/examples.php?id=$1 [L]
@@ -19,3 +21,9 @@ RewriteRule ^example$            controller/examples.php [L]
 
 #Mnemonics
 RewriteRule ^mnemonics/([0-9]+)$ controller/mnemonics.php?id=$1 [L]
+RewriteRule ^mnemonics$          controller/mnemonics.php [L]
+
+#Meaning
+RewriteRule ^meaning/([0-9]+)$   controller/examples.php?id=$1 [L]
+RewriteRule ^meaning$            controller/examples.php  [L]
+
