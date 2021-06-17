@@ -24,6 +24,9 @@
             $this->_id = $id;
         }
         public function setMnemonics($mnemonics){
+            if(strlen($mnemonics) <= 4 ){
+                throw new MnemonicsException("Mnemonics length is too short");
+            }
             $this->_mnemonics = $mnemonics;
         }
         public function setWordId($wordId){

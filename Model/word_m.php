@@ -19,6 +19,9 @@
             $this->_id = $id;
         }
         public function setWord($word){
+            if(strlen($word) <= 1){
+                throw new WordException("Length of the word is too short!!");
+            }
             $this->_word = $word;
         }
 

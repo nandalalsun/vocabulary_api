@@ -24,6 +24,9 @@
             $this->_id = $id;
         }
         public function setMeaning($meaning){
+            if(strlen($meaning) <= 5){
+                throw new ExampleException("Meaning length is too short!!");
+            }
             $this->_meaning = $meaning;
         }
         public function setWordId($wordId){

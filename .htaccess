@@ -24,6 +24,6 @@ RewriteRule ^mnemonics/([0-9]+)$ controller/mnemonics.php?id=$1 [L]
 RewriteRule ^mnemonics$          controller/mnemonics.php [L]
 
 #Meaning
-RewriteRule ^meaning/([0-9]+)$   controller/examples.php?id=$1 [L]
-RewriteRule ^meaning$            controller/examples.php  [L]
+RewriteRule ^meaning/([0-9]+)$   controller/meaning.php?id=$1 [L]
+RewriteRule ^meaning$            controller/meaning.php  [L]
 
