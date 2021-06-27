@@ -24,13 +24,13 @@
             $this->_id = $id;
         }
         public function setExample($example){
-            if($example === null || strlen($example) < 1 || strlen($example) > 255){
-                throw new ExampleException("Example is not valid");
+            if(strlen($example) < 3 || strlen($example) > 255){
+                throw new ExampleException("Length of example is too short");
             }
             $this->_example = $example;
         }
         public function setWordId($wordId){
-            if($wordId == null || strlen($wordId) <= 0 || !is_numeric($wordId)){
+            if(strlen($wordId) <= 0 || !is_numeric($wordId)){
                 throw new ExampleException("Word Id is not valid");
             }
             $this->_wordId = $wordId;

@@ -25,7 +25,7 @@
         }
         public function setMeaning($meaning){
             if(strlen($meaning) <= 5){
-                throw new ExampleException("Meaning length is too short!!");
+                throw new MeaningException("Meaning length is too short!!");
             }
             $this->_meaning = $meaning;
         }
